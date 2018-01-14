@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Balance
+comment0.text=\n\ The\ Balance\ Class\ keeps\ track\ of\ the\ current\ balance\ of\ your\ finances\n\ Its\ pretty\ simple\ with\ just\ integers\n\ \n\ @author\ (rod\ termaat)\n\ @version\ (0.02)\n
+comment1.params=
+comment1.target=Balance()
+comment2.params=
+comment2.target=int\ getBalance()
+comment3.params=balance
+comment3.target=void\ setBalance(int)
+comment4.params=amount
+comment4.target=java.lang.String\ withdraw(int)
+comment5.params=amount
+comment5.target=java.lang.String\ deposit(int)
+comment6.params=initialBalance
+comment6.target=void\ setNeverChangesBalance(int)
+comment7.params=
+comment7.target=int\ getNeverChangesBalance()
+numComments=8

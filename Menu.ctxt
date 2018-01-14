@@ -1,0 +1,36 @@
+#BlueJ class context
+comment0.target=Menu
+comment1.params=args
+comment1.target=void\ Main(java.lang.String[])
+comment10.params=
+comment10.target=void\ initialBalance()
+comment11.params=t_type
+comment11.target=void\ addTransaction(java.lang.String)
+comment12.params=date\ category\ name\ t_amount
+comment12.target=void\ addTransaction(java.sql.Date,\ java.lang.String,\ java.lang.String,\ int)
+comment13.params=
+comment13.target=void\ delTransaction()
+comment13.text=\n\ \ \ \ private\ void\ listTransactions(){\n\ \ \ \ \ \ \ \ System.out.println("----------------------");\n\ \ \ \ \ \ \ \ System.out.println("Your\ NC\ balance\ is...$"\ +\ g_balance.getNeverChangesBalance());\n\ \ \ \ \ \ \ \ System.out.println("Your\ Global\ balance\ is...$"\ +\ g_balance.getBalance());\n\ \ \ \ \ \ \ \ System.out.println("Your\ transaction\ balance\ is...$"\ +\ t_balance.getBalance());\n\ \ \ \ \ \ \ \ System.out.println("----------------------------------");\n\ \ \ \ \ \ \ \ System.out.println("Index\\t\ Date\\t\\t\ Category\\tName\\t\\tAmount\\tBalance");\n\ \ \ \ \ \ \ \ System.out.println("---------------------------------------------------------------");\n\ \ \ \ \ \ \ \ String\ num;\n\ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ //sort\ the\ ArrayList\ before\ printing\n\ \ \ \ \ \ \ \ Collections.sort(rows,\ new\ Comparator<Transaction>()\ {\n\ \ \ \ \ \ \ \ \ \ \ \ public\ int\ compare(Transaction\ t1,\ Transaction\ t2)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ Long.valueOf(t1.getDate().getTime()).compareTo(t2.getDate().getTime());\n\ \ \ \ \ \ \ \ \ \ \ \ }\n\ \ \ \ \ \ \ \ });\n\ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ //\ loops\ thru\ the\ tranaction\ object\ \n\ \ \ \ \ \ \ \ //\ and\ prints\ out\ the\ rows\n\ \ \ \ \ \ \ \ for\ (Transaction\ printRow\ \:\ rows)\n\ \ \ \ \ \ \ \ {\n\ \ \ \ \ \ \ \ \ \ \ \ String\ t_cat,\ t_name;\n\ \ \ \ \ \ \ \ \ \ \ \ if(printRow.getCategory().length()\ <\ 7){\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t_cat\ \=\ "\\t\\t";}\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ else{\ t_cat\ \=\ "\\t";}\n\ \ \ \ \ \ \ \ \ \ \ \ if(printRow.getName().length()\ <\ 8)\ {\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t_name\ \=\ "\\t\\t";}\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ else{\ t_name\ \=\ "\\t";}\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \n\ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printRow.getID()\ +\ "\\t"\ +\ \n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sdf.format(printRow.getDate())\ +\ "\\t\ "\ +\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printRow.getCategory()\ +\ t_cat\ +\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printRow.getName()\ +\ t_name\ +\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printRow.getAmount()\ +\ "\\t"\ +\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printRow.gettBalance()\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ );\n\n\ \ \ \ \ \ \ \ }\n\ \ \ \ }\n
+comment14.params=
+comment14.target=void\ reCastList()
+comment15.params=t1\ t2
+comment15.target=int\ compare(Transaction,\ Transaction)
+comment16.params=
+comment16.target=void\ listTransactions()
+comment2.params=
+comment2.target=void\ runMenu()
+comment3.params=
+comment3.target=void\ printHeader()
+comment4.params=
+comment4.target=void\ printMenu()
+comment5.params=
+comment5.target=int\ getInput()
+comment6.params=question
+comment6.target=java.lang.String\ askQuestion(java.lang.String)
+comment7.params=question
+comment7.target=boolean\ askYesNo(java.lang.String)
+comment8.params=response
+comment8.target=void\ printResponse(java.lang.String)
+comment9.params=choice
+comment9.target=void\ performAction(int)
+numComments=17
